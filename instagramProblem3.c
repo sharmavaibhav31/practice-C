@@ -1,12 +1,13 @@
-/*Question 3: Logistics and Supply Chain Optimization
+/*Question 3: Optimizing Instagram’s Content Delivery Network (CDN) Using Dijkstra’s Algorithm
 Problem Statement:
-Optimize the logistics and supply chain of Flipkart’s platform 
-using Dijkstra’s algorithm to find the shortest path between 5 warehouses and 10 delivery locations.*/
+Optimize Instagram’s content delivery network (CDN) by 
+finding the shortest path from 5 data centers (CDN nodes) 
+to 10 different user locations using Dijkstra’s algorithm.*/
 
 #include <stdio.h>
 #include <limits.h>
 
-#define V 5 // Number of warehouses
+#define V 5 // Number of data centers (CDN nodes)
 
 int minDistance(int dist[], int sptSet[]) {
     int min = INT_MAX, min_index;
@@ -41,24 +42,25 @@ void dijkstra(int graph[V][V], int src) {
         }
     }
 
-    printf("Warehouse to Delivery Location Shortest Distance:\n");
+    printf("Content Delivery Network (CDN) Optimization - Shortest Path:\n");
     for (int i = 0; i < V; i++) {
-        printf("Warehouse %d -> Delivery %d: %d km\n", src, i, dist[i]);
+        printf("Data Center %d -> User Location %d: %d ms\n", src, i, dist[i]);
     }
 }
 
 int main() {
     int graph[V][V] = {
-        {0, 10, 20, 0, 0},
-        {10, 0, 5, 15, 0},
-        {20, 5, 0, 25, 30},
-        {0, 15, 25, 0, 10},
-        {0, 0, 30, 10, 0}
+        {0, 20, 30, 0, 0},
+        {20, 0, 10, 25, 0},
+        {30, 10, 0, 35, 40},
+        {0, 25, 35, 0, 15},
+        {0, 0, 40, 15, 0}
     };
 
-    int startWarehouse = 0;
-    printf("Computing shortest delivery routes from Warehouse %d...\n", startWarehouse);
-    dijkstra(graph, startWarehouse);
+    int startCDN = 0;
+    printf("Computing shortest delivery routes from Data Center %d...\n", startCDN);
+    dijkstra(graph, startCDN);
 
     return 0;
 }
+

@@ -1,6 +1,7 @@
-/*Question 2: Payment Gateway Failure
+/*Question 2: Payment Gateway Failure (Instagram Ads Payments)
 Problem Statement:
-Simulate a payment gateway failure in Flipkart’s platform, assuming that the failure probability is 10% (0.1). 
+Simulate a payment gateway failure for Instagram’s ad payments. 
+Assume that the failure probability is 15% (0.15). 
 The program should simulate 100 transactions and display the number of failed transactions.*/
 
 #include <stdio.h>
@@ -8,14 +9,14 @@ The program should simulate 100 transactions and display the number of failed tr
 #include <time.h>
 
 #define TOTAL_TRANSACTIONS 100
-#define FAILURE_PROBABILITY 0.1
+#define FAILURE_PROBABILITY 0.15
 
 int main() {
     int failedTransactions = 0;
     srand(time(0)); // Seed for randomness
 
     for (int i = 0; i < TOTAL_TRANSACTIONS; i++) {
-        if ((rand() % 10) < (FAILURE_PROBABILITY * 10)) { // 10% chance of failure
+        if ((rand() % 100) < (FAILURE_PROBABILITY * 100)) { // 15% chance of failure
             failedTransactions++;
         }
     }
