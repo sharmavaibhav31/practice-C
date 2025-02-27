@@ -1,0 +1,5 @@
+router1,Unpatched firmware
+firewall1,Weak rule set
+server1,Open ports exposed
+switch1,Default credentials used
+vpn1,Weak encryption protocol
