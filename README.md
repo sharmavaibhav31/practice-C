@@ -12,9 +12,11 @@
 🕵️‍♂️ Password Cracking (Hashcat)  
 🔄 File Handling & Logging  
 📊 Real-World Applications  
-📈 Stock Market Simulator  
+📈 Stock Market Simulator – A CLI-based stock trading system with file storage, authentication, and logging.  
 🏗️ Software Engineering Concepts  
-🗄️ Secure Storage & Encryption
+🗄️ Secure Storage & Encryption  
+✅System-Level Programming – File handling, process management, and system calls in C.
+
 
 ---
 🚀 Getting Started
