@@ -9,8 +9,7 @@
 🧩 Searching & Sorting Algorithms  
 🔐 Cyber & System Programming  
 🛂 Role-Based Authentication  
-🕵️‍♂️ Password Cracking (Hashcat)  
-🔄 File Handling & Logging  
+🕵️‍♂️ Password Cracking (Hashcat)    
 📊 Real-World Applications  
 📈 Stock Market Simulator – A CLI-based stock trading system with file storage, authentication, and logging.  
 🏗️ Software Engineering Concepts  
