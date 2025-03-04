@@ -160,8 +160,8 @@ int main() {
 }
 */
 
-/*
-Code 2 for the simulation
+
+//Code 2 for the simulation
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -430,11 +430,16 @@ int main() {
     }
     return 0;
 }
-*/
+
+
+
+
+
+
 
 /*
 Code 3 for the simulation
-*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -582,3 +587,4 @@ int main() {
     }
     return 0;
 }
+*/
