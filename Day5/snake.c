@@ -3,48 +3,37 @@
 #include <stdlib.h>  // For rand()
 #include <time.h>    // For time()
 
-#define WIDTH 30  // Width of the screen
-#define LENGTH 5  // Max length the snake can grow
-
 int main() {
-    int snakePos = 0;     // Initial snake position
-    int snakeLength = 1;  // Initial length of the snake
-    int dashPos;          // Position of the dash
-    int direction = 1;    // 1 = moving right, -1 = moving left
+    int snakePos = 0;     
+    int snakeLength = 1;
+    int dashPos;          
+    int direction = 1;   
 
-    srand(time(NULL));    // Seed for random number generator
-    dashPos = rand() % WIDTH; // Place the dash randomly
-
-    while (snakeLength <= LENGTH) {
-        system("cls"); // Clear screen for animation effect
-
-        // Print the screen
-        for (int i = 0; i < WIDTH; i++) {
+    srand(time(NULL));    
+    dashPos = rand() % 100; 
+    while (snakeLength <= 5) {
+        system("cls"); 
+        for (int i = 0; i < 100; i++) {
             if (i == dashPos)
-                printf("-"); // Print dash
+                printf("-");
             else if (i >= snakePos && i < snakePos + snakeLength)
-                printf("O"); // Print snake
+                printf("O");
             else
                 printf(" ");
         }
         printf("\n");
-
-        // Move snake forward
         snakePos += direction;
 
-        // If snake reaches the dash, grow and place a new dash
         if (snakePos == dashPos) {
             snakeLength++;
-            dashPos = rand() % WIDTH; // New random dash position
+            dashPos = rand() % 100; 
         }
 
-        // Change direction if hitting edges
-        if (snakePos + snakeLength >= WIDTH || snakePos <= 0)
+        if (snakePos + snakeLength >= 100 || snakePos <= 0)
             direction = -direction;
 
-        Sleep(200); // Delay for animation
+        Sleep(200); 
     }
-
     printf("\nGame Over! Snake is fully grown.\n");
     return 0;
 }
